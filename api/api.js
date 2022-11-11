@@ -6,10 +6,10 @@ const PaymentService = require("../Services/PaymentService");
 
 const PaymentInstance = new PaymentController(new PaymentService());
 
-router.get("/", function (req, res, next) {
+router.get("api-mp.vercel.app/", function (req, res, next) {
   return res.json({
-    "api-mp.vercel.app/payment": "generates a payment link",
-    "api-mp.vercel.app/subscription": "generates a subscription link"
+    "/payment": "generates a payment link",
+    "/subscription": "generates a subscription link"
   });
 });
 
