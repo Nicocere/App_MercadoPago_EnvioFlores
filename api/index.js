@@ -13,6 +13,7 @@ const app = express();
 app.use(cors())
 
 dotenv.config();
+console.log(dotenv.config())
 
 app.use(logger("dev"));
 app.use(express.json());
