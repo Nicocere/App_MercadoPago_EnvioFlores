@@ -1,9 +1,7 @@
 {
     "version": 2,
     "name": "app-payment-mp-envioflores",
-    "builds": [
-       { "src": "/api/index.js", "use": "@vercel/node" }
-    ],
+    
 
     "rewrites": [
         { "source": "/api/(.*)", "destination": "/api" }]
