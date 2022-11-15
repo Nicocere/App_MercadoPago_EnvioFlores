@@ -6,7 +6,7 @@ const dotenv = require("dotenv");
 
 const cors = require('cors')
 
-const indexRouter = require("./routes");
+const indexRouter = require("./api/routes");
 
 const app = express();
 
