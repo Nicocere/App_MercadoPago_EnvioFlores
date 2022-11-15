@@ -20,5 +20,4 @@ router.post("/payment", function (req, res, next) {
   PaymentInstance.getPaymentLink(req.body, res);
 });
 
-
 module.exports = router;
