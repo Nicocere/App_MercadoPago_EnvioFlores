@@ -1,4 +1,4 @@
-const axios = require("axios");
+import { post } from "axios";
 class PaymentService {
   async createPayment(req) {
 
@@ -17,7 +17,7 @@ class PaymentService {
         success: "/success"
       }
     };
-    const payment = await axios.post(url, body, {
+    const payment = await post(url, body, {
       headers: {
         "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.ACCESS_TOKEN}`
@@ -27,4 +27,4 @@ class PaymentService {
   }
 }
 
-module.exports = PaymentService;
+export default PaymentService;
