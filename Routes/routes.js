@@ -1,8 +1,8 @@
-import { Router } from 'express';
-var router = Router();
+const express = require('express');
+const router = express.Router();
 
-import PaymentController from "../Controllers/PaymentsController";
-import PaymentService from "../Services/PaymentService";
+const PaymentController = require("../Controllers/PaymentsController");
+const PaymentService = require("../Services/PaymentService");
 
 const PaymentInstance = new PaymentController(new PaymentService());
 
@@ -20,4 +20,4 @@ router.post("/payment", function (req, res, next) {
   PaymentInstance.getPaymentLink(req.body, res);
 });
 
-export default router;
+module.exports = router;

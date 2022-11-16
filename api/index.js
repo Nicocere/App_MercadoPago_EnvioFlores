@@ -1,25 +1,25 @@
-import express, { json, urlencoded } from "express";
+const express = require("express");
 const path = require("path");
-import cookieParser from "cookie-parser";
-import logger from "morgan";
-import { config } from "dotenv";
+const cookieParser = require("cookie-parser");
+const logger = require("morgan");
+const dotenv = require("dotenv");
 
-import cors from 'cors';
+const cors = require('cors')
 
-import indexRouter from "../Routes/routes";
+const indexRouter = require("../Routes/routes");
 
 const app = express();
 
 app.use(cors())
 
-config();
+dotenv.config();
 
 app.use(logger("dev"));
-app.use(json());
-app.use(urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 
-export default app;
+module.exports = app;
