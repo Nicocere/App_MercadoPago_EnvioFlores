@@ -13,7 +13,7 @@ router.get("/", function (req, res, next) {
   });
 });
 
-router.post(".payment", function (req, res, next) {
+router.post("/payment", function (req, res, next) {
 
   console.log("REQ", req.body)
 
