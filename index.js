@@ -10,11 +10,9 @@ const indexRouter = require("./Routes/routes");
 
 const app = express();
 
-app.use(cors({
-    origin: whiteList
-}))
+app.use(cors())
 
-const whiteList = [ 'https://envioflores.vercel.app/']
+
 
 dotenv.config();
 
