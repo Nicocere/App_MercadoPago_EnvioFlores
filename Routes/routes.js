@@ -13,7 +13,7 @@ router.get("/", function (req, res, next) {
     "/subscription": "generates a subscription link"
   },
 
- 
+  res.redirect('/payment' )
 
   
   );
@@ -22,7 +22,7 @@ router.get("/", function (req, res, next) {
 router.post("/payment", function (req, res, next) {
 
   console.log("REQ", req.body)
-  res.redirect('https://mp-envioflores.vercel.app/payment' )
+  // res.redirect('https://mp-envioflores.vercel.app/payment' )
   
   
   PaymentInstance.getPaymentLink(req.body, res);
