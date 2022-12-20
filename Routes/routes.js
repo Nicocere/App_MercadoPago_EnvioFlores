@@ -14,7 +14,7 @@ router.get("/", function (req, res, next) {
   },
 
 
-  res.redirect('https://mp-envioflores.vercel.app/payment' )
+
   
   );
 });
