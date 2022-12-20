@@ -10,11 +10,11 @@ const indexRouter = require("./Routes/routes");
 
 const app = express();
 
-app.use(cors())
+app.use(cors({
+    origin: whiteList
+}))
 
-app.get('/payment', function (req, res, next) {
-    res.json({msg: 'This is CORS-enabled for all origins!'})
-  })
+const whiteList = [ 'https://envioflores.vercel.app/']
 
 dotenv.config();
 
