@@ -18,6 +18,7 @@ router.get("/", function (req, res, next) {
     "/subscription": "generates a subscription link"
   },
 
+
   );
 });
 
