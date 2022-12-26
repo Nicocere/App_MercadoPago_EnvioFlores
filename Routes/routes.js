@@ -17,6 +17,7 @@ router.get("/", function (req, res, next) {
     "/payment": "generates a payment link",
     "/subscription": "generates a subscription link"
   },
+
   );
 });
 

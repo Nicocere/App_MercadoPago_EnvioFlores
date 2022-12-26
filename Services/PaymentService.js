@@ -11,7 +11,6 @@ class PaymentService {
     const body = {
       payer_email: req.mail,
       items: itemsCart,
-      
       back_urls: {
         failure: "/failure",
         pending: "/pending",
