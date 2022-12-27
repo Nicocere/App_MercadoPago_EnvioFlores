@@ -13,14 +13,14 @@ const app = express();
 // app.options('*', cors())
 app.use(cors())
 
-// app.use(function (req, res, next) {
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Headers', 'Authorization, X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Request-Method');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, DELETE');
+    res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
+    next();
+});
 
-//     res.header('Access-Control-Allow-Origin', true);
-//     res.header('Access-Control-Allow-Headers', true);
-//     res.header('Access-Control-Allow-Credentials', true);
-//     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
-//     next();
-//   });
 
 
 dotenv.config();
