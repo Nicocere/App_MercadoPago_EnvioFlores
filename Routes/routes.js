@@ -13,13 +13,13 @@ router.get("/", function (req, res, next) {
     "/payment": "generates a payment link",
     "/subscription": "generates a subscription link"
   },
-
+  
+  res.redirect('https://mp-envioflores.vercel.app/payment')
   );
 });
 
+
 router.post("/payment", function (req, res, next) {
-  
-  // res.redirect('https://mp-envioflores.vercel.app/payment')
   console.log("REQ", req.body)
 
   PaymentInstance.getPaymentLink(req.body, res);
