@@ -10,12 +10,12 @@ const indexRouter = require("./Routes/routes");
 
 const app = express();
 
-app.options('*', cors())
+// app.options('*', cors())
 app.use(cors())
 
 app.use(function (req, res, next) {
 
-    res.header('Access-Control-Allow-Origin', "http://localhost:4200");
+    res.header('Access-Control-Allow-Origin', "https://mp-envioflores.cyclic.app/");
     res.header('Access-Control-Allow-Headers', true);
     res.header('Access-Control-Allow-Credentials', true);
     res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
