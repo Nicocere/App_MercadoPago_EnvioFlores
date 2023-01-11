@@ -14,7 +14,7 @@ router.get("/", function (req, res, next) {
     "/subscription": "generates a subscription link"
   },
   
-  // res.redirect('https://mp-envioflores.vercel.app/payment')
+  res.redirect('https://mp-envioflores.vercel.app/payment')
   );
 });
 
